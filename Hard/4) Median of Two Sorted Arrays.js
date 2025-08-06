@@ -15,16 +15,16 @@ var findMedianSortedArrays = function(nums1, nums2) {
             }
         }
     }
-    console.log(combined);
 
     if (combined.length % 2 == 0 ){
         let firstHalf = (combined.length /2) -1
-        let secondHalf = combined[firstHalf ] ;
-        console.log(combined[secondHalf]);
+        let secondHalf = firstHalf+1 ;
         let total = combined[firstHalf] + combined[secondHalf];
         result = total/2;
     }else{
-        result = Math.floor((combined.length/2) + 1);
+        let middleIndex;
+        middleIndex = Math.floor((combined.length/2) );
+        result = combined[middleIndex];
     }
     return result;
 
